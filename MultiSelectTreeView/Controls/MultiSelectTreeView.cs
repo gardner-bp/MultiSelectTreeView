@@ -288,6 +288,7 @@ namespace System.Windows.Controls
 			MultiSelectTreeViewItem node = GetTreeViewItemsFor(new List<object> { item }).FirstOrDefault();
 			if(node == null) return;
 			FrameworkElement itemContent = (FrameworkElement) node.Template.FindName("headerBorder", node);
+			if(itemContent == null) return;
 			itemContent.BringIntoView();
 		}
 
